@@ -1,9 +1,10 @@
 export const services = [
   {
     slug: "industrial-decontamination",
-    title: "Industrial Decontamination",
+    title: "Industrial Decontamination Services in Nigeria",
+    shortTitle: "Industrial Decontamination",
     summary:
-      "Chemical and mechanical decontamination of process vessels, columns, heat exchangers and piping systems using closed-loop, low-emission methods.",
+      "Chemical and mechanical decontamination of process vessels, columns, heat exchangers and piping systems across Nigerian refineries, gas plants and flow stations, using closed-loop, low-emission methods that cut shutdown duration.",
     points: [
       "Hydrocarbon and H2S vapour freeing",
       "Chemical circulation & degassing",
@@ -13,9 +14,10 @@ export const services = [
   },
   {
     slug: "tank-cleaning",
-    title: "Tank Cleaning",
+    title: "Tank Cleaning Services in Nigeria",
+    shortTitle: "Tank Cleaning",
     summary:
-      "Non-man entry and controlled entry cleaning of crude, product and slop tanks, with sludge recovery that returns hydrocarbon value to the client.",
+      "Non-man entry and controlled entry cleaning of crude, product and slop tanks at terminals and tank farms across the Niger Delta, with sludge recovery that returns hydrocarbon value to the client before API 653 inspection.",
     points: [
       "Automated non-man entry systems",
       "Sludge mobilisation & oil recovery",
@@ -25,9 +27,10 @@ export const services = [
   },
   {
     slug: "pipeline-cleaning",
-    title: "Pipeline Cleaning",
+    title: "Pipeline Cleaning Services in Nigeria",
+    shortTitle: "Pipeline Cleaning",
     summary:
-      "Pigging, flushing, chemical cleaning, hydrotesting and dewatering for flowlines, trunklines and export pipelines.",
+      "Pigging, flushing, chemical cleaning, hydrotesting and dewatering for flowlines, trunklines and export pipelines onshore and swamp in Rivers, Bayelsa and Delta States.",
     points: [
       "Mechanical & gel pigging",
       "Nitrogen purging and drying",
@@ -38,8 +41,9 @@ export const services = [
   {
     slug: "engineering-services",
     title: "Engineering Services",
+    shortTitle: "Engineering Services",
     summary:
-      "Multi-discipline engineering from conceptual studies through detailed design, with brownfield modification and integrity focus.",
+      "Multi-discipline engineering from conceptual studies through detailed design, delivered to Nigerian regulatory and operator standards with a brownfield modification and asset integrity focus.",
     points: [
       "FEED and detailed design",
       "Mechanical, piping & structural",
@@ -50,8 +54,9 @@ export const services = [
   {
     slug: "procurement",
     title: "Procurement",
+    shortTitle: "Procurement",
     summary:
-      "Transparent sourcing of OEM-certified equipment, valves, spares and consumables with expediting and logistics into Nigerian terminals.",
+      "Transparent sourcing of OEM-certified equipment, valves, spares and consumables, with expediting, customs clearing and logistics into Onne, Port Harcourt and Warri terminals.",
     points: [
       "Vendor qualification & audits",
       "Expediting and inspection",
@@ -62,8 +67,9 @@ export const services = [
   {
     slug: "construction",
     title: "Construction",
+    shortTitle: "Construction",
     summary:
-      "Civil, mechanical and structural construction for facility upgrades, tank farms, pump stations and pipeline right-of-way works.",
+      "Civil, mechanical and structural construction for facility upgrades, tank farms, pump stations and pipeline right-of-way works, executed with Nigerian crews and owned equipment spreads.",
     points: [
       "Fabrication and welding (ASME/API)",
       "Tank erection and repairs",
@@ -74,8 +80,9 @@ export const services = [
   {
     slug: "maintenance",
     title: "Maintenance",
+    shortTitle: "Maintenance",
     summary:
-      "Planned, preventive and shutdown maintenance backed by resident crews, spares management and reliability reporting.",
+      "Planned, preventive and shutdown maintenance for oil and gas facilities in Nigeria, backed by resident crews, spares management and monthly reliability reporting.",
     points: [
       "Turnaround & shutdown execution",
       "Rotating equipment servicing",
@@ -139,4 +146,37 @@ export const stats = [
   { value: "120+", label: "Projects delivered" },
   { value: "1.2M", label: "Safe man-hours" },
   { value: "0", label: "Lost time incidents" },
+] as const;
+
+export const faqs = [
+  {
+    question: "What services does Soala Global Nigeria Limited provide?",
+    answer:
+      "We provide industrial decontamination, tank cleaning, pipeline cleaning, engineering, procurement, construction and maintenance services for oil and gas operators, refineries and terminals in Nigeria — all under one contract.",
+  },
+  {
+    question: "Where in Nigeria do you operate?",
+    answer:
+      "Our operational base is Port Harcourt, Rivers State, and we mobilise across the Niger Delta including Bonny, Onne, Warri, Bayelsa and Delta State, as well as other locations nationwide on request.",
+  },
+  {
+    question: "Are you an indigenous Nigerian EPC contractor?",
+    answer:
+      "Yes. Soala Global Nigeria Limited is a wholly indigenous Nigerian company, and our engineering, procurement and construction work is executed with local crews in line with Nigerian local content requirements.",
+  },
+  {
+    question: "Can you clean crude oil tanks without man entry?",
+    answer:
+      "Yes. We use automated non-man entry tank cleaning systems with sludge mobilisation and oil recovery, so hydrocarbon value is returned to the client and confined space exposure is minimised before inspection.",
+  },
+  {
+    question: "How quickly can you mobilise for a shutdown or emergency?",
+    answer:
+      "We maintain a 24/7 shutdown response with owned equipment spreads, so mobilisation does not depend on third-party rentals. Send us your scope and we will respond with a method statement, manpower plan and proposal.",
+  },
+  {
+    question: "How do I request a quote?",
+    answer:
+      "Use the contact form on this website, email info@soalaglobal.com or call +234 916 000 9698 with details of your tank, pipeline, plant or project scope.",
+  },
 ] as const;
