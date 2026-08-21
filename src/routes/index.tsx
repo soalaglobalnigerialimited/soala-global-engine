@@ -3,30 +3,31 @@ import { ArrowRight, CheckCircle2, HardHat, ShieldCheck, Wrench } from "lucide-r
 
 import heroImage from "@/assets/hero-refinery.jpg";
 import tankImage from "@/assets/tank-cleaning.jpg";
-import { services, stats } from "@/lib/site-data";
+import { faqs, services, stats } from "@/lib/site-data";
+
+const TITLE = "Oil & Gas EPC Contractor Nigeria | Soala Global Nigeria Limited";
+const DESCRIPTION =
+  "Soala Global Nigeria Limited is an indigenous oil and gas EPC contractor in Nigeria delivering industrial decontamination, tank cleaning and pipeline cleaning services from Port Harcourt.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Soala Global Nigeria Limited | Oil & Gas Services" },
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:url", content: "https://soalaglobal.com/" },
       {
-        name: "description",
+        name: "keywords",
         content:
-          "Soala Global Nigeria Limited delivers industrial decontamination, tank and pipeline cleaning, engineering, procurement, construction and maintenance across Nigeria.",
-      },
-      {
-        property: "og:title",
-        content: "Soala Global Nigeria Limited | Oil & Gas Services",
-      },
-      {
-        property: "og:description",
-        content:
-          "Industrial decontamination, tank and pipeline cleaning, and full EPCM services for the Nigerian oil and gas industry.",
+          "oil and gas EPC contractor Nigeria, industrial decontamination services Nigeria, tank cleaning services Nigeria, pipeline cleaning services Nigeria, engineering procurement and construction Nigeria",
       },
     ],
+    links: [{ rel: "canonical", href: "https://soalaglobal.com/" }],
   }),
   component: Home,
 });
+
 
 function Home() {
   return (
