@@ -217,6 +217,30 @@ function Home() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="border-t border-border bg-muted py-20 lg:py-28">
+        <div className="mx-auto max-w-4xl px-5 lg:px-8">
+          <p className="eyebrow">FAQs</p>
+          <h2 className="mt-3 text-3xl font-bold lg:text-4xl">
+            Frequently asked questions
+          </h2>
+          <dl className="mt-10 divide-y divide-border border-t border-border">
+            {faqs.map((faq) => (
+              <div key={faq.question} className="py-6">
+                <dt className="font-display text-lg font-bold text-primary">
+                  {faq.question}
+                </dt>
+                <dd className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {faq.answer}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+
+
       {/* CTA */}
       <section className="bg-gradient-navy">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-16 lg:flex-row lg:items-center lg:justify-between lg:px-8">
