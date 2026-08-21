@@ -37,6 +37,7 @@ function Services() {
           {services.map((service, index) => (
             <article
               key={service.slug}
+              id={service.slug}
               className="grid gap-6 border-l-4 border-accent bg-card p-7 shadow-card lg:grid-cols-[1fr_1fr] lg:p-10"
             >
               <div>

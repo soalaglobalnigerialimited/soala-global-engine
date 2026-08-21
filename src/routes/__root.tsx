@@ -83,7 +83,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Industrial decontamination, tank cleaning, pipeline cleaning, engineering, procurement, construction and maintenance services in Nigeria.",
+          "Industrial decontamination, tank cleaning, pipeline cleaning, engineering, procurement, construction, maintenance and LPG reticulation services in Nigeria.",
       },
       { name: "author", content: "Soala Global Nigeria Limited" },
       { property: "og:type", content: "website" },
@@ -110,7 +110,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           alternateName: "Soala Global",
           url: "https://soalaglobal.com/",
           description:
-            "Indigenous Nigerian oil and gas services and EPC contractor specialising in industrial decontamination, tank cleaning, pipeline cleaning, engineering, procurement, construction and maintenance.",
+            "Indigenous Nigerian oil and gas services and EPC contractor specialising in industrial decontamination, tank cleaning, pipeline cleaning, engineering, procurement, construction, maintenance and LPG reticulation.",
           email: "info@soalaglobal.com",
           telephone: "+234 916 000 9698",
           address: {
@@ -135,6 +135,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             "Industrial decontamination services Nigeria",
             "Tank cleaning services Nigeria",
             "Pipeline cleaning services Nigeria",
+            "LPG reticulation services Nigeria",
           ],
         }),
       },

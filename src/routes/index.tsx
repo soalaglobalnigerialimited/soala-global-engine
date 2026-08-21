@@ -151,9 +151,9 @@ function Home() {
               Oil and gas services across Nigeria
             </h2>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              Seven integrated service lines — decontamination, tank and pipeline
-              cleaning, engineering, procurement, construction and maintenance —
-              delivered by one accountable Nigerian team.
+              Eight integrated service lines — decontamination, tank and pipeline
+              cleaning, engineering, procurement, construction, maintenance and LPG
+              reticulation — delivered by one accountable Nigerian team.
             </p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">

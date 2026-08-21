@@ -90,6 +90,23 @@ export const services = [
       "Manpower supply and supervision",
     ],
   },
+  {
+    slug: "lpg-reticulation-services",
+    title: "LPG Reticulation Services in Nigeria",
+    shortTitle: "LPG Reticulation Services",
+    summary:
+      "End-to-end design, installation, testing, commissioning and maintenance of safe LPG distribution networks for residential, commercial and industrial facilities across Nigeria, from bulk storage through point-of-use appliances.",
+    points: [
+      "LPG Reticulation System Design",
+      "LPG Storage Tank Installation",
+      "LPG Pipeline Installation",
+      "LPG Distribution Network Construction",
+      "LPG System Testing and Commissioning",
+      "LPG Maintenance and Safety Inspections",
+      "Residential LPG Reticulation",
+      "Commercial and Industrial LPG Reticulation",
+    ],
+  },
 ] as const;
 
 export const projects = [
@@ -152,7 +169,7 @@ export const faqs = [
   {
     question: "What services does Soala Global Nigeria Limited provide?",
     answer:
-      "We provide industrial decontamination, tank cleaning, pipeline cleaning, engineering, procurement, construction and maintenance services for oil and gas operators, refineries and terminals in Nigeria — all under one contract.",
+      "We provide industrial decontamination, tank cleaning, pipeline cleaning, engineering, procurement, construction, maintenance and LPG reticulation services for oil and gas operators, refineries, terminals and industrial facilities in Nigeria — all under one contract.",
   },
   {
     question: "Where in Nigeria do you operate?",

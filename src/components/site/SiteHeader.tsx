@@ -8,6 +8,7 @@ const nav = [
   { to: "/services", label: "Services" },
   { to: "/projects", label: "Projects" },
   { to: "/hse", label: "HSE" },
+  { to: "/services", label: "LPG Reticulation", hash: "lpg-reticulation-services" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -34,8 +35,9 @@ export function SiteHeader() {
         <nav className="hidden items-center gap-7 lg:flex">
           {nav.map((item) => (
             <Link
-              key={item.to}
+              key={`${item.to}-${item.label}`}
               to={item.to}
+              hash={item.hash}
               activeOptions={{ exact: item.to === "/" }}
               className="font-display text-sm font-semibold uppercase tracking-widest text-primary-foreground/75 transition-colors hover:text-accent"
               activeProps={{ className: "text-accent" }}
@@ -69,8 +71,9 @@ export function SiteHeader() {
         <nav className="border-t border-primary-foreground/10 bg-navy-deep px-5 pb-6 pt-2 lg:hidden">
           {nav.map((item) => (
             <Link
-              key={item.to}
+              key={`${item.to}-${item.label}`}
               to={item.to}
+              hash={item.hash}
               activeOptions={{ exact: item.to === "/" }}
               onClick={() => setOpen(false)}
               className="block border-b border-primary-foreground/10 py-3 font-display text-base font-semibold uppercase tracking-widest text-primary-foreground/80"
