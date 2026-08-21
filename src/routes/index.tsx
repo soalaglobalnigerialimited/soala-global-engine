@@ -147,9 +147,13 @@ function Home() {
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="max-w-2xl">
             <p className="eyebrow">What we do</p>
-            <h2 className="mt-3 text-3xl font-bold lg:text-5xl">Core services</h2>
+            <h2 className="mt-3 text-3xl font-bold lg:text-5xl">
+              Oil and gas services across Nigeria
+            </h2>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              Seven integrated service lines, delivered by one accountable team.
+              Seven integrated service lines — decontamination, tank and pipeline
+              cleaning, engineering, procurement, construction and maintenance —
+              delivered by one accountable Nigerian team.
             </p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -159,8 +163,9 @@ function Home() {
                 className="border-t-4 border-accent bg-card p-7 shadow-card"
               >
                 <h3 className="font-display text-xl font-bold text-primary">
-                  {service.title}
+                  {service.shortTitle}
                 </h3>
+
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   {service.summary}
                 </p>
