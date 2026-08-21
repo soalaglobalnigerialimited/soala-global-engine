@@ -123,8 +123,9 @@ function Contact() {
                     Select a service
                   </option>
                   {services.map((s) => (
-                    <option key={s.slug} value={s.title}>
-                      {s.title}
+                    <option key={s.slug} value={s.shortTitle}>
+                      {s.shortTitle}
+
                     </option>
                   ))}
                   <option value="Other">Other / multiple</option>
