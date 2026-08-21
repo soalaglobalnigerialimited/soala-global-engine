@@ -51,12 +51,8 @@ function Contact() {
             <li className="flex gap-4">
               <Phone className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
               <span>
-                <a href="tel:+2348000000000" className="hover:text-accent">
-                  +234 800 000 0000
-                </a>
-                <br />
-                <a href="tel:+2349000000000" className="hover:text-accent">
-                  +234 900 000 0000
+                <a href="tel:+2349160009698" className="hover:text-accent">
+                  +234 916 000 9698
                 </a>
               </span>
             </li>
@@ -92,7 +88,7 @@ function Contact() {
               </p>
               <p className="mt-2 text-sm text-muted-foreground">
                 Our team will respond within one business day. For urgent shutdown support,
-                call +234 800 000 0000.
+                call +234 916 000 9698.
               </p>
               <button
                 type="button"

@@ -67,8 +67,8 @@ export function SiteFooter() {
             </li>
             <li className="flex gap-3">
               <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-              <a href="tel:+2348000000000" className="hover:text-accent">
-                +234 800 000 0000
+              <a href="tel:+2349160009698" className="hover:text-accent">
+                +234 916 000 9698
               </a>
             </li>
             <li className="flex gap-3">
