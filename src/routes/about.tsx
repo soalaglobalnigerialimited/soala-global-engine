@@ -4,25 +4,24 @@ import { PageHero } from "@/components/site/PageHero";
 import pipelineImage from "@/assets/pipeline.jpg";
 import { stats } from "@/lib/site-data";
 
+const TITLE = "About Us | Indigenous Oil & Gas EPC Contractor in Nigeria";
+const DESCRIPTION =
+  "Soala Global Nigeria Limited is an indigenous oil and gas services and EPC contractor based in Port Harcourt, serving operators, refiners and terminals across the Niger Delta.";
+
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us | Soala Global Nigeria Limited" },
-      {
-        name: "description",
-        content:
-          "Soala Global Nigeria Limited is an indigenous oil and gas services company based in Port Harcourt, serving operators across the Niger Delta.",
-      },
-      { property: "og:title", content: "About Soala Global Nigeria Limited" },
-      {
-        property: "og:description",
-        content:
-          "Our story, mission, values and capability as an indigenous Nigerian oil and gas services contractor.",
-      },
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:url", content: "https://soalaglobal.com/about" },
     ],
+    links: [{ rel: "canonical", href: "https://soalaglobal.com/about" }],
   }),
   component: About,
 });
+
 
 function About() {
   return (

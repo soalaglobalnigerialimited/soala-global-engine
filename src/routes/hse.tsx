@@ -4,25 +4,24 @@ import { AlertTriangle, ClipboardCheck, Leaf, Users } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import hseImage from "@/assets/hse-team.jpg";
 
+const TITLE = "HSE Policy | Safety-Led Oil & Gas Contractor in Nigeria";
+const DESCRIPTION =
+  "The Soala Global health, safety and environment framework for Nigerian oil and gas work: permit-to-work discipline, confined space control, waste management and crew training.";
+
 export const Route = createFileRoute("/hse")({
   head: () => ({
     meta: [
-      { title: "HSE Policy | Soala Global Nigeria Limited" },
-      {
-        name: "description",
-        content:
-          "Our health, safety and environment framework: permit-to-work discipline, confined space control, waste management and continuous crew training.",
-      },
-      { property: "og:title", content: "HSE | Soala Global Nigeria Limited" },
-      {
-        property: "og:description",
-        content:
-          "Safety-led execution: JSAs, toolbox talks, competency training and environmental stewardship on every scope.",
-      },
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:url", content: "https://soalaglobal.com/hse" },
     ],
+    links: [{ rel: "canonical", href: "https://soalaglobal.com/hse" }],
   }),
   component: Hse,
 });
+
 
 function Hse() {
   return (

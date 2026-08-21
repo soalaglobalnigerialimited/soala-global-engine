@@ -5,25 +5,24 @@ import { useState } from "react";
 import { PageHero } from "@/components/site/PageHero";
 import { services } from "@/lib/site-data";
 
+const TITLE = "Contact | Tank Cleaning & Decontamination Quotes, Nigeria";
+const DESCRIPTION =
+  "Contact Soala Global Nigeria Limited in Port Harcourt for tank cleaning, industrial decontamination, pipeline and EPC enquiries. Call +234 916 000 9698 or send your scope.";
+
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact | Soala Global Nigeria Limited" },
-      {
-        name: "description",
-        content:
-          "Contact Soala Global Nigeria Limited in Port Harcourt for tank cleaning, decontamination, pipeline and EPCM enquiries. Send your scope for a proposal.",
-      },
-      { property: "og:title", content: "Contact Soala Global Nigeria Limited" },
-      {
-        property: "og:description",
-        content:
-          "Reach our Port Harcourt team for quotes, tenders and emergency shutdown support.",
-      },
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:url", content: "https://soalaglobal.com/contact" },
     ],
+    links: [{ rel: "canonical", href: "https://soalaglobal.com/contact" }],
   }),
   component: Contact,
 });
+
 
 function Contact() {
   const [submitted, setSubmitted] = useState(false);
