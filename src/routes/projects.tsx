@@ -4,25 +4,24 @@ import { MapPin } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { projects } from "@/lib/site-data";
 
+const TITLE = "Projects | Tank Cleaning & EPC Projects in Nigeria";
+const DESCRIPTION =
+  "Selected tank cleaning, industrial decontamination, pipeline pre-commissioning, turnaround maintenance and EPC projects delivered across the Niger Delta, Nigeria.";
+
 export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
-      { title: "Projects | Soala Global Nigeria Limited" },
-      {
-        name: "description",
-        content:
-          "Selected tank cleaning, pipeline pre-commissioning, turnaround maintenance and EPC projects delivered across the Niger Delta.",
-      },
-      { property: "og:title", content: "Projects | Soala Global Nigeria Limited" },
-      {
-        property: "og:description",
-        content:
-          "Track record of decontamination, pipeline and construction projects for Nigerian operators and refiners.",
-      },
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:url", content: "https://soalaglobal.com/projects" },
     ],
+    links: [{ rel: "canonical", href: "https://soalaglobal.com/projects" }],
   }),
   component: Projects,
 });
+
 
 function Projects() {
   return (

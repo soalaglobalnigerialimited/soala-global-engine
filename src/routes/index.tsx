@@ -3,30 +3,31 @@ import { ArrowRight, CheckCircle2, HardHat, ShieldCheck, Wrench } from "lucide-r
 
 import heroImage from "@/assets/hero-refinery.jpg";
 import tankImage from "@/assets/tank-cleaning.jpg";
-import { services, stats } from "@/lib/site-data";
+import { faqs, services, stats } from "@/lib/site-data";
+
+const TITLE = "Oil & Gas EPC Contractor Nigeria | Soala Global Nigeria Limited";
+const DESCRIPTION =
+  "Soala Global Nigeria Limited is an indigenous oil and gas EPC contractor in Nigeria delivering industrial decontamination, tank cleaning and pipeline cleaning services from Port Harcourt.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Soala Global Nigeria Limited | Oil & Gas Services" },
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:url", content: "https://soalaglobal.com/" },
       {
-        name: "description",
+        name: "keywords",
         content:
-          "Soala Global Nigeria Limited delivers industrial decontamination, tank and pipeline cleaning, engineering, procurement, construction and maintenance across Nigeria.",
-      },
-      {
-        property: "og:title",
-        content: "Soala Global Nigeria Limited | Oil & Gas Services",
-      },
-      {
-        property: "og:description",
-        content:
-          "Industrial decontamination, tank and pipeline cleaning, and full EPCM services for the Nigerian oil and gas industry.",
+          "oil and gas EPC contractor Nigeria, industrial decontamination services Nigeria, tank cleaning services Nigeria, pipeline cleaning services Nigeria, engineering procurement and construction Nigeria",
       },
     ],
+    links: [{ rel: "canonical", href: "https://soalaglobal.com/" }],
   }),
   component: Home,
 });
+
 
 function Home() {
   return (
@@ -146,9 +147,13 @@ function Home() {
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="max-w-2xl">
             <p className="eyebrow">What we do</p>
-            <h2 className="mt-3 text-3xl font-bold lg:text-5xl">Core services</h2>
+            <h2 className="mt-3 text-3xl font-bold lg:text-5xl">
+              Oil and gas services across Nigeria
+            </h2>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              Seven integrated service lines, delivered by one accountable team.
+              Seven integrated service lines — decontamination, tank and pipeline
+              cleaning, engineering, procurement, construction and maintenance —
+              delivered by one accountable Nigerian team.
             </p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -158,8 +163,9 @@ function Home() {
                 className="border-t-4 border-accent bg-card p-7 shadow-card"
               >
                 <h3 className="font-display text-xl font-bold text-primary">
-                  {service.title}
+                  {service.shortTitle}
                 </h3>
+
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   {service.summary}
                 </p>
@@ -210,6 +216,30 @@ function Home() {
           ))}
         </div>
       </section>
+
+      {/* FAQ */}
+      <section className="border-t border-border bg-muted py-20 lg:py-28">
+        <div className="mx-auto max-w-4xl px-5 lg:px-8">
+          <p className="eyebrow">FAQs</p>
+          <h2 className="mt-3 text-3xl font-bold lg:text-4xl">
+            Frequently asked questions
+          </h2>
+          <dl className="mt-10 divide-y divide-border border-t border-border">
+            {faqs.map((faq) => (
+              <div key={faq.question} className="py-6">
+                <dt className="font-display text-lg font-bold text-primary">
+                  {faq.question}
+                </dt>
+                <dd className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {faq.answer}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+
 
       {/* CTA */}
       <section className="bg-gradient-navy">

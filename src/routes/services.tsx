@@ -4,25 +4,24 @@ import { ArrowRight, Check } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { services } from "@/lib/site-data";
 
+const TITLE = "Industrial Decontamination & EPC Services Nigeria | Soala Global";
+const DESCRIPTION =
+  "Industrial decontamination, tank cleaning, pipeline cleaning, engineering, procurement, construction and maintenance services for oil and gas operators in Nigeria.";
+
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services | Industrial Decontamination & EPCM" },
-      {
-        name: "description",
-        content:
-          "Industrial decontamination, tank cleaning, pipeline cleaning, engineering, procurement, construction and maintenance services for oil and gas operators in Nigeria.",
-      },
-      { property: "og:title", content: "Services | Soala Global Nigeria Limited" },
-      {
-        property: "og:description",
-        content:
-          "Seven integrated oil and gas service lines delivered by certified crews and multi-discipline engineers.",
-      },
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:url", content: "https://soalaglobal.com/services" },
     ],
+    links: [{ rel: "canonical", href: "https://soalaglobal.com/services" }],
   }),
   component: Services,
 });
+
 
 function Services() {
   return (

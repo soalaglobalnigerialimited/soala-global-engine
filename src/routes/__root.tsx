@@ -100,7 +100,47 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Soala Global Nigeria Limited",
+          alternateName: "Soala Global",
+          url: "https://soalaglobal.com/",
+          description:
+            "Indigenous Nigerian oil and gas services and EPC contractor specialising in industrial decontamination, tank cleaning, pipeline cleaning, engineering, procurement, construction and maintenance.",
+          email: "info@soalaglobal.com",
+          telephone: "+234 916 000 9698",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Port Harcourt",
+            addressRegion: "Rivers State",
+            addressCountry: "NG",
+          },
+          areaServed: { "@type": "Country", name: "Nigeria" },
+          contactPoint: [
+            {
+              "@type": "ContactPoint",
+              telephone: "+234 916 000 9698",
+              email: "info@soalaglobal.com",
+              contactType: "sales",
+              areaServed: "NG",
+              availableLanguage: "English",
+            },
+          ],
+          knowsAbout: [
+            "Oil and gas EPC contracting in Nigeria",
+            "Industrial decontamination services Nigeria",
+            "Tank cleaning services Nigeria",
+            "Pipeline cleaning services Nigeria",
+          ],
+        }),
+      },
+    ],
   }),
+
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
