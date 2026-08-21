@@ -53,6 +53,7 @@ export function SiteFooter() {
             <li>Engineering Services</li>
             <li>Procurement &amp; Construction</li>
             <li>Maintenance</li>
+            <li>LPG Reticulation Services</li>
           </ul>
         </div>
 

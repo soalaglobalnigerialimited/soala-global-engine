@@ -169,7 +169,7 @@ export const faqs = [
   {
     question: "What services does Soala Global Nigeria Limited provide?",
     answer:
-      "We provide industrial decontamination, tank cleaning, pipeline cleaning, engineering, procurement, construction and maintenance services for oil and gas operators, refineries and terminals in Nigeria — all under one contract.",
+      "We provide industrial decontamination, tank cleaning, pipeline cleaning, engineering, procurement, construction, maintenance and LPG reticulation services for oil and gas operators, refineries, terminals and industrial facilities in Nigeria — all under one contract.",
   },
   {
     question: "Where in Nigeria do you operate?",
