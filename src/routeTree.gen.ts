@@ -15,7 +15,7 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as HseRouteImport } from './routes/hse'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as ServicesRouteImport } from './routes/services'
-import { Route as SitemapXmlRouteImport } from './routes/sitemap.xml'
+import { Route as SitemapDotXmlRouteImport } from './routes/sitemap[.].xml'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -47,9 +47,9 @@ const ServicesRoute = ServicesRouteImport.update({
   path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SitemapXmlRoute = SitemapXmlRouteImport.update({
-  id: '/sitemap/xml',
-  path: '/sitemap/xml',
+const SitemapDotXmlRoute = SitemapDotXmlRouteImport.update({
+  id: '/sitemap./xml',
+  path: '/sitemap./xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -60,7 +60,7 @@ export interface FileRoutesByFullPath {
   '/hse': typeof HseRoute
   '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
-  '/sitemap/xml': typeof SitemapXmlRoute
+  '/sitemap./xml': typeof SitemapDotXmlRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -69,7 +69,7 @@ export interface FileRoutesByTo {
   '/hse': typeof HseRoute
   '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
-  '/sitemap/xml': typeof SitemapXmlRoute
+  '/sitemap./xml': typeof SitemapDotXmlRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -79,7 +79,7 @@ export interface FileRoutesById {
   '/hse': typeof HseRoute
   '/projects': typeof ProjectsRoute
   '/services': typeof ServicesRoute
-  '/sitemap/xml': typeof SitemapXmlRoute
+  '/sitemap./xml': typeof SitemapDotXmlRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -90,7 +90,7 @@ export interface FileRouteTypes {
     | '/hse'
     | '/projects'
     | '/services'
-    | '/sitemap/xml'
+    | '/sitemap./xml'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -99,7 +99,7 @@ export interface FileRouteTypes {
     | '/hse'
     | '/projects'
     | '/services'
-    | '/sitemap/xml'
+    | '/sitemap./xml'
   id:
     | '__root__'
     | '/'
@@ -108,7 +108,7 @@ export interface FileRouteTypes {
     | '/hse'
     | '/projects'
     | '/services'
-    | '/sitemap/xml'
+    | '/sitemap./xml'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -118,7 +118,7 @@ export interface RootRouteChildren {
   HseRoute: typeof HseRoute
   ProjectsRoute: typeof ProjectsRoute
   ServicesRoute: typeof ServicesRoute
-  SitemapXmlRoute: typeof SitemapXmlRoute
+  SitemapDotXmlRoute: typeof SitemapDotXmlRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -165,11 +165,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/sitemap/xml': {
-      id: '/sitemap/xml'
-      path: '/sitemap/xml'
-      fullPath: '/sitemap/xml'
-      preLoaderRoute: typeof SitemapXmlRouteImport
+    '/sitemap./xml': {
+      id: '/sitemap./xml'
+      path: '/sitemap./xml'
+      fullPath: '/sitemap./xml'
+      preLoaderRoute: typeof SitemapDotXmlRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -182,7 +182,7 @@ const rootRouteChildren: RootRouteChildren = {
   HseRoute: HseRoute,
   ProjectsRoute: ProjectsRoute,
   ServicesRoute: ServicesRoute,
-  SitemapXmlRoute: SitemapXmlRoute,
+  SitemapDotXmlRoute: SitemapDotXmlRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
